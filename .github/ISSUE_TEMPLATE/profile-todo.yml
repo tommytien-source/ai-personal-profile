@@ -1,0 +1,37 @@
+name: 档案待办
+description: 跟踪个人档案的补充、修订与核对
+title: "[档案] "
+body:
+  - type: dropdown
+    id: section
+    attributes:
+      label: 要更新的章节
+      options:
+        - 个人简介与背景
+        - 工作与学习习惯
+        - 沟通风格偏好
+        - 常用工具与技术栈
+        - 项目经验与成果
+        - 长期目标
+        - 共享与维护说明
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: 具体修改
+      description: 写明需要新增、更正或删除的内容。
+      placeholder: "示例：将沟通偏好补充为先给结论，再说明依据。"
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完成标准
+      description: 使用复选框列出可以核对的结果。
+      value: |
+        - [ ] 已确认资料准确，适合公开
+        - [ ] 已更新 README 对应章节
+        - [ ] 已提交修改并引用本 Issue 编号
+    validations:
+      required: true
